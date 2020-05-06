@@ -1,5 +1,6 @@
 #pragma once
 #include <vector>
+#include <cstdlib>
 
 /**
  * All of necessary data structures are defined here

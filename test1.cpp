@@ -67,9 +67,10 @@ int main()
 
 	std::cout << "\n#################### Union #####################\n";
 	possible_result.clear();
-	PolyClip::Polygon poly1 = polygon1;
-	PolyClip::Polygon poly2 = polygon2;
-
+	PolyClip::Polygon poly1(vertices1);
+//	= polygon1;
+	PolyClip::Polygon poly2(vertices2);
+//	= polygon2;
 	PolyClip::PloygonOpration::DetectIntersection(poly1, poly2);
 	if (PolyClip::PloygonOpration::Mark(poly1, poly2, possible_result, PolyClip::MarkUnion))
 	{
@@ -98,8 +99,8 @@ int main()
 
 	std::cout << "\n#################### Differentiate #####################\n";
 	possible_result.clear();
-	PolyClip::Polygon pol1 = polygon1;
-	PolyClip::Polygon pol2 = polygon2;
+	PolyClip::Polygon pol1(vertices1);
+	PolyClip::Polygon pol2(vertices2);
 
 	PolyClip::PloygonOpration::DetectIntersection(pol1, pol2);
 	if (PolyClip::PloygonOpration::Mark(pol1, pol2, possible_result, PolyClip::MarkDifferentiate))
